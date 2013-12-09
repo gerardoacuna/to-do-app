@@ -34,10 +34,28 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 /* CONTENTS
 
+0. Style Guide
 1. Typography
 
 -------------------------------------------------------------------------------*/
 
+/* Style Guide
+-------------------------------------------------------------------------------*/
+
+section.style-guide {
+	width: 960px;
+	margin: 50px auto;
+}
+
+section.style-guide .sample {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin: 0 10px 0 0;
+	text-align: center;
+	line-height: 100px;
+	color: rgba(0, 0, 0, 0.5);
+}
 
 /* Typography
 -------------------------------------------------------------------------------*/
@@ -46,7 +64,77 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-weight: 700;
+	line-height: 1.1;
+}
 
+h1, .h1, h2, .h2, h3 {
+	margin: 20px 0 10px;
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+	margin: 10px 0;
+}
+
+h1, .h1 {
+	font-size: 36px;
+}
+
+h2, .h2 {
+  font-size: 30px;
+}
+
+h3, .h3 {
+  font-size: 24px;
+}
+
+h4, .h4 {
+  font-size: 18px;
+}
+
+h5, .h5 {
+  font-size: 14px;
+}
+
+h6, .h6 {
+  font-size: 12px;
+}
+
+/* Colors
+-------------------------------------------------------------------------------*/
+
+.one {
+	background: #fa4b30;
+}
+
+.two {
+	background: #fa7333;
+}
+
+.three {
+	background: #fb9a35;
+}
+
+.four {
+	background: #fcc038;
+}
+
+.five {
+	background: #fde63a;
+}
+
+.six {
+	background: #f0fd3d;
+}
+
+.seven {
+	background: #cdfe40;
+}
+
+.eight {
+	background: #abfe42;
+}
 
 /* Print styles!
 -------------------------------------------------------------------------------*/
