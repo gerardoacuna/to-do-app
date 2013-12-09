@@ -36,6 +36,9 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 0. Style Guide
 1. Typography
+2. Colors
+3. Components
+4. Icons
 
 -------------------------------------------------------------------------------*/
 
@@ -192,6 +195,56 @@ small,
 .add-task::-moz-placeholder { color:#000; } /* firefox 19+ */
 .add-task:-ms-input-placeholder { color:#000; } /* ie */
 .add-task:-moz-placeholder { color:#000; }
+
+/* Icons
+-------------------------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'Entypo';
+	src:url('../fonts/entypo.eot');
+	src:url('../fonts/entypo.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/entypo.woff') format('woff'),
+		url('../fonts/entypo.ttf') format('truetype'),
+		url('../fonts/entypo.svg#entypo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Entypo';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon.x-large {
+	font-size: 76px;
+}
+
+.icon.large {
+	font-size: 56px;
+}
+
+.icon.medium {
+	font-size: 46px;
+}
+
+.icon.small {
+	font-size: 24px;
+}
+
+.icon.clock:before {
+  content: "🕔";
+}
+
+.icon.delete:before {
+	content: "❌";
+}
 
 /* Print styles!
 -------------------------------------------------------------------------------*/
