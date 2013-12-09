@@ -57,6 +57,10 @@ section.style-guide .sample {
 	color: rgba(0, 0, 0, 0.5);
 }
 
+section.style-guide .task-list {
+	margin: 20px 0 0;
+}
+
 /* Typography
 -------------------------------------------------------------------------------*/
 
@@ -67,6 +71,10 @@ body {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-weight: 700;
 	line-height: 1.1;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	color: #999;
 }
 
 h1, .h1, h2, .h2, h3 {
@@ -99,6 +107,15 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 12px;
+}
+
+p {
+	margin: 0 0 10px;
+}
+
+small,
+.small {
+  font-size: 85%;
 }
 
 /* Colors
@@ -135,6 +152,46 @@ h6, .h6 {
 .eight {
 	background: #abfe42;
 }
+
+/* Components
+-------------------------------------------------------------------------------*/
+.task {
+	width: 250px;
+	height: 75px;
+	display: block;
+	margin: 0 0 5px;
+	line-height: 75px;
+	padding: 0 25px;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, .5);
+}
+
+.add-task {
+	font-size: 36px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 10px 20px 0;
+	border: none;
+	border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+}
+
+.add-task:focus {
+	outline: none;
+}
+
+.add-task + label {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.add-task::-webkit-input-placeholder { color:#000; }
+.add-task::-moz-placeholder { color:#000; } /* firefox 19+ */
+.add-task:-ms-input-placeholder { color:#000; } /* ie */
+.add-task:-moz-placeholder { color:#000; }
 
 /* Print styles!
 -------------------------------------------------------------------------------*/
