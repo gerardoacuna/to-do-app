@@ -18,6 +18,7 @@
 	
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
 	<title></title>
 	
@@ -62,8 +63,8 @@
 	<link rel="stylesheet" href="_/css/reset.css" />
 	<link rel="stylesheet" href="_/css/style.css" />
 	
-	<!-- Lea Verou's Prefix Free, lets you use only un-prefixed properties in yuor CSS files -->
-	<script src="_/js/prefixfree.min.js"></script>
+	<!-- Lea Verou's Prefix Free, lets you use only un-prefixed properties in yuor CSS files 
+	<script src="_/js/prefixfree.min.js"></script>-->
 	
 	<!-- This is an un-minified, complete version of Modernizr. 
 		 Before you move to production, you should generate a custom build that only has the detects you need. -->
@@ -100,6 +101,14 @@
 		</div>
 	</header>
 
+	<main>
+		<div class="add-task-group">
+			<i class="x-large clock icon"></i>
+			<input class="add-task" type="text" placeholder="Add your tasks here!" />
+			<label class="task-label">Press enter when you're done.</label>
+		</div>
+	</main>
+
 	<aside>
 		<ul class="task-list">
 			<li class="task one"><input id="task1" type="checkbox"/><label for="task1">Task 1</label><i class="x-large delete icon"></i></li>
@@ -112,14 +121,6 @@
 			<li class="task eight"><input id="task8" type="checkbox"/><label for="task18">Task 8</label><i class="x-large delete icon"></i></li>
 		</ul>
 	</aside>
-
-	<main>
-		<div class="add-task-group">
-			<i class="x-large clock icon"></i>
-			<input class="add-task" type="text" placeholder="Add your tasks here!" />
-			<label>Press enter when you're done.</label>
-		</div>
-	</main>
 
 	<footer>
 		<small>©Naranya Studios 2013</small>

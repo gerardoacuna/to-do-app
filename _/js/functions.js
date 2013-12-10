@@ -1,7 +1,7 @@
 (function($){
 
 	$(document).ready(function (){
-	
+
 		$('.delete').on('click', function() {
 			$(this).closest('li')
 				.addClass('remove')
