@@ -37,9 +37,10 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 0. Style Guide
 1. Typography
 2. Colors
-4. Layout
-3. Components
-5. Icons
+3. Layout
+4. Components
+5. Animations
+6. Icons
 
 -------------------------------------------------------------------------------*/
 
@@ -196,10 +197,10 @@ aside ul.task-list {
 	top: 75px;
 	right: 0;
 	bottom: 0;
-	width: 380px;
+	width: 400px;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	padding-left: 80px;
+	padding-left: 100px;
 	z-index: 100;
 }
 
@@ -306,10 +307,10 @@ footer {
 	letter-spacing: -1px;
 	text-transform: uppercase;
 	width: 100%;
-	padding: 15px 20px 0 50px;
+	padding: 15px 20px 3px 50px;
 	border: none;
 	border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
-	margin-bottom: 3px;
+	margin-bottom: 5px;
 	background: transparent;
 }
 
@@ -338,6 +339,35 @@ footer {
 .add-task::-moz-placeholder { color:#000; } /* firefox 19+ */
 .add-task:-ms-input-placeholder { color:#000; } /* ie */
 .add-task:-moz-placeholder { color:#000; }
+
+/* Animations
+-------------------------------------------------------------------------------*/
+
+.remove {
+	-webkit-animation: remove-task 0.5s 0.1s ease forwards;
+}
+
+@-webkit-keyframes remove-task {
+	0% {
+    -webkit-transform: translateX(0);
+	}
+
+	20% {
+		opacity: 1;
+		-webkit-transform: translateX(-20px);
+	}
+
+	50% {
+		height: 80px;
+    -webkit-transform: translateX(2000px);
+	}
+
+	100% {
+		display: none;
+		height: 0;
+    opacity: 0;
+	}
+}
 
 /* Icons
 -------------------------------------------------------------------------------*/
