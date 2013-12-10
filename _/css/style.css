@@ -191,13 +191,16 @@ main {
 	padding: 0 50px;
 }
 
-aside {
+aside ul.task-list {
 	position: fixed;
 	top: 75px;
 	right: 0;
 	bottom: 0;
-	width: 300px;
+	width: 380px;
 	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-left: 80px;
+	z-index: 100;
 }
 
 footer {
@@ -214,7 +217,8 @@ footer {
 -------------------------------------------------------------------------------*/
 
 .task {
-	width: 300px;
+	position: relative;
+	width: 330px;
 	height: 80px;
 	display: block;
 	margin: 0 0 5px;
@@ -222,8 +226,31 @@ footer {
 	text-transform: uppercase;
 	font-size: 18px;
 	font-weight: 400;
-	color: rgba(0, 0, 0, .4);
-	position: relative;
+	color: rgba(0, 0, 0, 0.4);
+	transition: all 0.3s ease;
+}
+
+.task:hover {
+	// -webkit-transform: translate(-50px, 0);
+	margin-left: -80px;
+}
+
+.task .delete {
+	position: absolute;
+	top: 0;
+	width: 80px;
+	height: 80px;
+	background: #fff;
+	line-height: 80px;
+	text-align: center;
+	right: -50px;
+	color: #000;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.task .delete:hover {
+	color: #fa4b30;
 }
 
 .list-title label {
@@ -235,6 +262,7 @@ footer {
   padding: 0 0 0 70px;
   vertical-align: top;
   cursor: pointer;
+	transition: all 0.3s;
 }
 
 .task input[type="checkbox"],
@@ -268,7 +296,7 @@ footer {
 }
 
 .task input[type="checkbox"]:checked + label {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .add-task {
@@ -282,6 +310,7 @@ footer {
 	border: none;
 	border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
 	margin-bottom: 3px;
+	background: transparent;
 }
 
 .add-task-group {
