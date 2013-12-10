@@ -167,8 +167,14 @@ html, body {
 header {
 	width: 100%;
 	height: 75px;
-	background: hsl(240, 100%, 50%);
 	text-transform: uppercase;
+}
+
+.list-title {
+	float: right;
+	width: 300px;
+	position: relative;
+	height: 75px;
 }
 
 header h4 {
@@ -177,21 +183,20 @@ header h4 {
 
 main {
 	margin-right: 300px;
-	background: hsl(30, 100%, 50%);
 	position: fixed;
 	top: 75px;
 	left: 0;
 	right: 0;
 	bottom: 20px;
+	padding: 0 50px;
 }
 
 aside {
 	position: fixed;
 	top: 75px;
 	right: 0;
-	bottom: 20px;
+	bottom: 0;
 	width: 300px;
-	background: hsl(130, 100%, 50%);
 	overflow-y: scroll;
 }
 
@@ -199,9 +204,9 @@ footer {
 	height: 20px;
 	position: fixed;
 	bottom: 0;
-	width: 100%;
+	right: 300px;
+	left: 0;
 	padding: 0 10px;
-	background: hsl(300, 100%, 50%);
 }
 
 
@@ -209,7 +214,7 @@ footer {
 -------------------------------------------------------------------------------*/
 
 .task {
-	width: 250px;
+	width: 300px;
 	height: 80px;
 	display: block;
 	margin: 0 0 5px;
@@ -221,16 +226,21 @@ footer {
 	position: relative;
 }
 
-.task label {
+.list-title label {
+	margin: 20px 0 8px;
+}
+
+.task label, .list-title label {
 	display: inline-block;
-  position: relative;
   padding: 0 0 0 70px;
   vertical-align: top;
   cursor: pointer;
 }
 
 .task input[type="checkbox"],
-.task label::before {
+.task label::before,
+.list-title input[type="checkbox"],
+.list-title label::before {
   width: 24px;
   height: 24px;
   top: 50%;
@@ -240,7 +250,7 @@ footer {
   cursor: pointer;
 }
 
-.task input[type="checkbox"] {
+.task input[type="checkbox"], .list-title input[type="checkbox"] {
   opacity: 0;
   display: inline-block;
   vertical-align: middle;
@@ -250,6 +260,11 @@ footer {
 .task label::before {
   content: '';
   border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.list-title label::before {
+  content: '';
+  border: 2px solid #000;
 }
 
 .task input[type="checkbox"]:checked + label {
@@ -270,6 +285,7 @@ footer {
 }
 
 .add-task-group {
+	margin-top: 25%;
 	position: relative;
 }
 
